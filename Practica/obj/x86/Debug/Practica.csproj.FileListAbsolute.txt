@@ -1,0 +1,6 @@
+/home/cesar31/Projects/Practica/Practica/bin/Debug/Practica.exe
+/home/cesar31/Projects/Practica/Practica/bin/Debug/Practica.pdb
+/home/cesar31/Projects/Practica/Practica/obj/x86/Debug/Practica.csprojAssemblyReference.cache
+/home/cesar31/Projects/Practica/Practica/obj/x86/Debug/Practica.csproj.CoreCompileInputs.cache
+/home/cesar31/Projects/Practica/Practica/obj/x86/Debug/Practica.exe
+/home/cesar31/Projects/Practica/Practica/obj/x86/Debug/Practica.pdb
