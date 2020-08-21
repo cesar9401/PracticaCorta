@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Gtk;
+using Practica;
 
 public partial class MainWindow : Gtk.Window
 {
@@ -25,7 +27,14 @@ public partial class MainWindow : Gtk.Window
         }
         else
         {
+            Logica logic = new Logica();
+            logic.setOracion(oracion);
 
+            labelPalabras.Text = logic.Palabras();
+            labelNumeros.Text = logic.Numeros();
+            labelDecimales.Text = logic.Decimales();
+            labelMonedas.Text = logic.Monedas();
+            labelErrores.Text = logic.Errores();
         }
     }
 }

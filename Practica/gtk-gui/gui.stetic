@@ -7,58 +7,128 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/Practica.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="600 397">
+  <widget class="Gtk.Window" id="MainWindow" design-size="789 555">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
-    <property name="WindowPosition">CenterOnParent</property>
+    <property name="WindowPosition">CenterAlways</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
-      <widget class="Gtk.VBox" id="vbox1">
+      <widget class="Gtk.Fixed" id="fixed1">
         <property name="MemberName" />
-        <property name="Spacing">6</property>
-        <property name="BorderWidth">18</property>
+        <property name="HasWindow">False</property>
         <child>
           <widget class="Gtk.Label" id="labelTitulo">
             <property name="MemberName" />
-            <property name="HeightRequest">47</property>
-            <property name="LabelProp" translatable="yes">Ingresa una oracion para analizar</property>
+            <property name="WidthRequest">221</property>
+            <property name="HeightRequest">55</property>
+            <property name="LabelProp" translatable="yes">Ingresa una palabra para analizar</property>
           </widget>
           <packing>
-            <property name="Position">0</property>
-            <property name="AutoSize">False</property>
-            <property name="Fill">False</property>
+            <property name="X">50</property>
+            <property name="Y">50</property>
           </packing>
         </child>
         <child>
           <widget class="Gtk.Entry" id="entradaText">
             <property name="MemberName" />
-            <property name="HeightRequest">48</property>
+            <property name="WidthRequest">498</property>
+            <property name="HeightRequest">40</property>
             <property name="CanFocus">True</property>
             <property name="IsEditable">True</property>
             <property name="InvisibleChar">•</property>
           </widget>
           <packing>
-            <property name="Position">1</property>
-            <property name="AutoSize">False</property>
-            <property name="Expand">False</property>
-            <property name="Fill">False</property>
+            <property name="X">50</property>
+            <property name="Y">120</property>
           </packing>
         </child>
         <child>
           <widget class="Gtk.Button" id="analizarButton">
             <property name="MemberName" />
-            <property name="HeightRequest">74</property>
+            <property name="WidthRequest">120</property>
+            <property name="HeightRequest">40</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Analizar</property>
             <property name="UseUnderline">True</property>
-            <property name="BorderWidth">15</property>
             <signal name="Clicked" handler="OnAnalizarButtonClicked" />
           </widget>
           <packing>
-            <property name="Position">2</property>
-            <property name="AutoSize">False</property>
-            <property name="Fill">False</property>
+            <property name="X">600</property>
+            <property name="Y">120</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="labelPalabras">
+            <property name="MemberName" />
+            <property name="WidthRequest">700</property>
+            <property name="HeightRequest">36</property>
+            <property name="LabelProp" translatable="yes">Palabras: </property>
+            <property name="Selectable">True</property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">225</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="labelNumeros">
+            <property name="MemberName" />
+            <property name="WidthRequest">700</property>
+            <property name="HeightRequest">36</property>
+            <property name="LabelProp" translatable="yes">Numeros: </property>
+            <property name="Selectable">True</property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">275</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="labelDecimales">
+            <property name="MemberName" />
+            <property name="WidthRequest">700</property>
+            <property name="HeightRequest">36</property>
+            <property name="LabelProp" translatable="yes">Decimales: </property>
+            <property name="Selectable">True</property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">325</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="labelMonedas">
+            <property name="MemberName" />
+            <property name="WidthRequest">700</property>
+            <property name="HeightRequest">36</property>
+            <property name="LabelProp" translatable="yes">Monedas: </property>
+            <property name="Selectable">True</property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">375</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="labelErrores">
+            <property name="MemberName" />
+            <property name="WidthRequest">700</property>
+            <property name="HeightRequest">36</property>
+            <property name="LabelProp" translatable="yes">Errores: </property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">425</property>
           </packing>
         </child>
       </widget>

@@ -3,7 +3,7 @@
 
 public partial class MainWindow
 {
-	private global::Gtk.VBox vbox1;
+	private global::Gtk.Fixed fixed1;
 
 	private global::Gtk.Label labelTitulo;
 
@@ -11,58 +11,122 @@ public partial class MainWindow
 
 	private global::Gtk.Button analizarButton;
 
+	private global::Gtk.Label labelPalabras;
+
+	private global::Gtk.Label labelNumeros;
+
+	private global::Gtk.Label labelDecimales;
+
+	private global::Gtk.Label labelMonedas;
+
+	private global::Gtk.Label labelErrores;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
 		// Widget MainWindow
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
-		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		this.WindowPosition = ((global::Gtk.WindowPosition)(3));
 		// Container child MainWindow.Gtk.Container+ContainerChild
-		this.vbox1 = new global::Gtk.VBox();
-		this.vbox1.Name = "vbox1";
-		this.vbox1.Spacing = 6;
-		this.vbox1.BorderWidth = ((uint)(18));
-		// Container child vbox1.Gtk.Box+BoxChild
+		this.fixed1 = new global::Gtk.Fixed();
+		this.fixed1.Name = "fixed1";
+		this.fixed1.HasWindow = false;
+		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.labelTitulo = new global::Gtk.Label();
-		this.labelTitulo.HeightRequest = 47;
+		this.labelTitulo.WidthRequest = 221;
+		this.labelTitulo.HeightRequest = 55;
 		this.labelTitulo.Name = "labelTitulo";
-		this.labelTitulo.LabelProp = global::Mono.Unix.Catalog.GetString("Ingresa una oracion para analizar");
-		this.vbox1.Add(this.labelTitulo);
-		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.labelTitulo]));
-		w1.Position = 0;
-		w1.Fill = false;
-		// Container child vbox1.Gtk.Box+BoxChild
+		this.labelTitulo.LabelProp = global::Mono.Unix.Catalog.GetString("Ingresa una palabra para analizar");
+		this.fixed1.Add(this.labelTitulo);
+		global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.labelTitulo]));
+		w1.X = 50;
+		w1.Y = 50;
+		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.entradaText = new global::Gtk.Entry();
-		this.entradaText.HeightRequest = 48;
+		this.entradaText.WidthRequest = 498;
+		this.entradaText.HeightRequest = 40;
 		this.entradaText.CanFocus = true;
 		this.entradaText.Name = "entradaText";
 		this.entradaText.IsEditable = true;
 		this.entradaText.InvisibleChar = '•';
-		this.vbox1.Add(this.entradaText);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.entradaText]));
-		w2.Position = 1;
-		w2.Expand = false;
-		w2.Fill = false;
-		// Container child vbox1.Gtk.Box+BoxChild
+		this.fixed1.Add(this.entradaText);
+		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.entradaText]));
+		w2.X = 50;
+		w2.Y = 120;
+		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.analizarButton = new global::Gtk.Button();
-		this.analizarButton.HeightRequest = 74;
+		this.analizarButton.WidthRequest = 120;
+		this.analizarButton.HeightRequest = 40;
 		this.analizarButton.CanFocus = true;
 		this.analizarButton.Name = "analizarButton";
 		this.analizarButton.UseUnderline = true;
-		this.analizarButton.BorderWidth = ((uint)(15));
 		this.analizarButton.Label = global::Mono.Unix.Catalog.GetString("Analizar");
-		this.vbox1.Add(this.analizarButton);
-		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.analizarButton]));
-		w3.Position = 2;
-		w3.Fill = false;
-		this.Add(this.vbox1);
+		this.fixed1.Add(this.analizarButton);
+		global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.analizarButton]));
+		w3.X = 600;
+		w3.Y = 120;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.labelPalabras = new global::Gtk.Label();
+		this.labelPalabras.WidthRequest = 700;
+		this.labelPalabras.HeightRequest = 36;
+		this.labelPalabras.Name = "labelPalabras";
+		this.labelPalabras.LabelProp = global::Mono.Unix.Catalog.GetString("Palabras: ");
+		this.labelPalabras.Selectable = true;
+		this.fixed1.Add(this.labelPalabras);
+		global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.labelPalabras]));
+		w4.X = 50;
+		w4.Y = 225;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.labelNumeros = new global::Gtk.Label();
+		this.labelNumeros.WidthRequest = 700;
+		this.labelNumeros.HeightRequest = 36;
+		this.labelNumeros.Name = "labelNumeros";
+		this.labelNumeros.LabelProp = global::Mono.Unix.Catalog.GetString("Numeros: ");
+		this.labelNumeros.Selectable = true;
+		this.fixed1.Add(this.labelNumeros);
+		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.labelNumeros]));
+		w5.X = 50;
+		w5.Y = 275;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.labelDecimales = new global::Gtk.Label();
+		this.labelDecimales.WidthRequest = 700;
+		this.labelDecimales.HeightRequest = 36;
+		this.labelDecimales.Name = "labelDecimales";
+		this.labelDecimales.LabelProp = global::Mono.Unix.Catalog.GetString("Decimales: ");
+		this.labelDecimales.Selectable = true;
+		this.fixed1.Add(this.labelDecimales);
+		global::Gtk.Fixed.FixedChild w6 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.labelDecimales]));
+		w6.X = 50;
+		w6.Y = 325;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.labelMonedas = new global::Gtk.Label();
+		this.labelMonedas.WidthRequest = 700;
+		this.labelMonedas.HeightRequest = 36;
+		this.labelMonedas.Name = "labelMonedas";
+		this.labelMonedas.LabelProp = global::Mono.Unix.Catalog.GetString("Monedas: ");
+		this.labelMonedas.Selectable = true;
+		this.fixed1.Add(this.labelMonedas);
+		global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.labelMonedas]));
+		w7.X = 50;
+		w7.Y = 375;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.labelErrores = new global::Gtk.Label();
+		this.labelErrores.WidthRequest = 700;
+		this.labelErrores.HeightRequest = 36;
+		this.labelErrores.Name = "labelErrores";
+		this.labelErrores.LabelProp = global::Mono.Unix.Catalog.GetString("Errores: ");
+		this.fixed1.Add(this.labelErrores);
+		global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.labelErrores]));
+		w8.X = 50;
+		w8.Y = 425;
+		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 600;
-		this.DefaultHeight = 397;
+		this.DefaultWidth = 789;
+		this.DefaultHeight = 555;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.analizarButton.Clicked += new global::System.EventHandler(this.OnAnalizarButtonClicked);

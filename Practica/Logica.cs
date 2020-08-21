@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Practica
 {
     public class Logica
@@ -8,6 +10,13 @@ namespace Practica
         private const char SPACE = ' ';
         private const char POINT = '.';
         private const String MONEDA = "Q";
+
+        private String palabras = "Palabras: ";
+        private String numeros = "Numeros: ";
+        private String decimales = "Decimales: ";
+        private String monedas = "Monedas: ";
+        private String errores = "Errores: ";
+
 
         public void setOracion(String oracion)
         {
@@ -23,19 +32,23 @@ namespace Practica
             {
                 if (isWord(partes[i]))
                 {
-                    Console.WriteLine("Palabra: " + partes[i]);
+                    palabras += partes[i] + ", ";
                 }
                 else if (isNumber(partes[i]))
                 {
-                    Console.WriteLine("Numero: " + partes[i]);
+                    numeros += partes[i] + ", ";
                 }
                 else if (isDecimal(partes[i]))
                 {
-                    Console.WriteLine("Decimal: " + partes[i]);
+                    decimales += partes[i] + ", ";
                 }
                 else if (isMoneda(partes[i]))
                 {
-                    Console.WriteLine("Moneda: " + partes[i]);
+                    monedas += partes[i] + ", ";
+                }
+                else 
+                {
+                    errores += partes[i] + ", ";
                 }
             }
         }
@@ -106,6 +119,28 @@ namespace Practica
                 }
             }
             return false;
+        }
+
+        public String Palabras()
+        {
+            return palabras;
+        }
+        public String Numeros()
+        {
+            return numeros;
+        }
+        public String Decimales()
+        {
+            return decimales;
+        }
+
+        public String Monedas()
+        {
+            return monedas;
+        }
+        public String Errores()
+        {
+            return errores;
         }
     }
 }
