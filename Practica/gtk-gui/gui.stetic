@@ -53,6 +53,7 @@
             <property name="Label" translatable="yes">Analizar</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">15</property>
+            <signal name="Clicked" handler="OnAnalizarButtonClicked" />
           </widget>
           <packing>
             <property name="Position">2</property>

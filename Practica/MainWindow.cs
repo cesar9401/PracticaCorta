@@ -13,4 +13,19 @@ public partial class MainWindow : Gtk.Window
         Application.Quit();
         a.RetVal = true;
     }
+
+    protected void OnAnalizarButtonClicked(object sender, EventArgs e)
+    {
+        String oracion = entradaText.Text;
+        if (oracion.Equals(""))
+        {
+            MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Info, ButtonsType.Ok, "Ingresa una oracion para analizar");
+            md.Run();
+            md.Destroy();
+        }
+        else
+        {
+
+        }
+    }
 }
